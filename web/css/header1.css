@@ -1,0 +1,17 @@
+.vf{
+  position:absolute;
+  left:500px;
+}
+.vs1{
+	position:absolute;
+    right:550px;
+}
+.vf>i,
+.vs1>i{
+	font-size:50px;
+}
+.ziti{
+	position:relative;
+	top:15px;
+	left:52px;
+}

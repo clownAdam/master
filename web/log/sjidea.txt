@@ -1,0 +1,25 @@
+添加数据：
+
+
+	1.商家可以通过商城后台http://localhost:8080/8mall/product_add.jsp添加商品
+	2.商家可以直接在数据库中添加商品
+
+
+
+权限：管理员拥有最高权限
+
+
+部署环境：
+
+	jdbc.user=root
+	jdbc.password=111111
+	jdbc.host=jdbc:mysql://172.16.85.131:3306/datakmall?useUnicode=true&characterEncoding=UTF-8
+	jdbc.driver=com.mysql.jdbc.Driver
+
+	hive.driver = org.apache.hive.jdbc.HiveDriver
+	hive.host = jdbc:hive2://172.16.85.131:10000/default
+	hive.user = root
+	hive.password = 111111
+
+
+通过大数据显示了地区的购买分布图，可以确定发货的仓库建立地点

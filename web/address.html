@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>e-乐购数据分析</title>
+    <!-- 引入 echarts.js -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <script src="js/echartsOne.js"></script>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    #main{
+      margin:0 auto;
+      margin-top:120px;
+    }
+    #qxfl{
+    position: absolute;
+    left:700px;
+    bottom:200px;
+     outline: none;
+     border:0;
+     display: block;
+    width: 180px;
+    line-height: 40px;
+    margin: 0 auto;
+    background: #f60;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+   float: left;
+  cursor: pointer;
+    }
+    #gfzr{
+     position: absolute;
+     left:980px;
+     bottom:200px;
+     outline: none;
+     border:0;
+     display: block;
+    width: 180px;
+    line-height: 40px;
+    margin: 0 auto;
+    background: #f60;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <h3>
+    	<button id="qxfl" data-index="1">用户购买力分析</button>
+    	<button id="gfzr" data-index="2">区域购买力分析</button>
+    </h3>
+	
+    <div id="main" style="width: 800px;height:500px;"></div>
+	
+    <script type="text/javascript">
+	  	$(function(){
+	  		//在这就行
+			qxfl('#qxfl');
+		  	$("h3 button").click(function(){
+		   		qxfl(this);
+		  	})
+	  	});
+    </script>
+	
+</body>
+</html>
