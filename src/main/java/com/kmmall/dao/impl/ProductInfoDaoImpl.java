@@ -183,5 +183,40 @@ public class ProductInfoDaoImpl implements ProductInfoDao {
 		}
 		return products;
 	}
+	public List<ProductInfo> selectAllByCart() throws SQLException {
+		Connection connection = JDBCUtil.getConnection();
+		ArrayList<ProductInfo> products = new ArrayList();
+		try {
+			String sql = "select * from product_cart ";
+			PreparedStatement ppst = connection.prepareStatement(sql);
+			ResultSet rs = ppst.executeQuery();
+			while (rs.next()) {
+				String product_id = rs.getString("product_id");
+				String product_name = rs.getString("product_name");
+				double product_price = rs.getDouble("product_price");
+				int product_stock = rs.getInt("product_stock");
+				String product_description = rs.getString("product_description");
+				String product_icon = rs.getString("product_icon");
+				String category_type = rs.getString("category_type");
+				String create_time = rs.getString("create_time");
+				String update_time = rs.getString("update_time");
 
+				ProductInfo productInfo = new ProductInfo();
+				productInfo.setProduct_id(product_id);
+				productInfo.setProduct_name(product_name);
+				productInfo.setProduct_price(product_price);
+				productInfo.setProduct_stock(product_stock);
+				productInfo.setProduct_description(product_description);
+				productInfo.setProduct_icon(product_icon);
+				productInfo.setCategory_type(category_type);
+				productInfo.setCreate_time(create_time);
+				productInfo.setUpdate_time(update_time);
+
+				products.add(productInfo);
+			}
+		} finally {
+			connection.close();
+		}
+		return products;
+	}
 }

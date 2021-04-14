@@ -82,7 +82,7 @@ public class IndexServlet extends HttpServlet {
 				}
 //				MallUser user = (MallUser) attribute;
 //				System.out.println("user_info:" + user);
-				head2Product = hiveQueryServiceImpl.selectHead2ByUid(user.getUser_id() + "");
+//				head2Product = hiveQueryServiceImpl.selectHead2ByUid(user.getUser_id() + "");
 ////				查询销量列表 预留大数据实现
 //				selectOrderMasterHive = hiveQueryServiceImpl.selectOrderMasterHive();
 //				System.out.println("selectOrderMasterHive:" + selectOrderMasterHive);

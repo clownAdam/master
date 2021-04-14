@@ -80,6 +80,9 @@
 				<%-- 				<input type="text" value="${user_info.user_id}">  --%>
 				<a type="button" style="padding-left: 20px; margin-left: 70px;"
 					class="btn btn-warning" href="order.do?pid=${product.product_id }">点击购买</a>
+				<a type="button" style="padding-left: 20px; margin-left: 70px;"
+<%--				<li><a href="user_manager.do">${sessionScope.user_info.user_name }</a></li>--%>
+				   class="btn btn-warning" href="/product_cart.do?pid=${product.product_id}&uid=${sessionScope.user_info.user_id}">加入购物车</a>
 			</div>
 		</div>
 	</div>
