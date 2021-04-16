@@ -12,6 +12,7 @@ import com.kmmall.bean.ProductInfo;
  */
 public interface ProductInfoDao {
 	public int insert(ProductInfo pi) throws SQLException;
+	public int insertCart(ProductInfo pi) throws SQLException;
 	//查询单个商品
 	public ProductInfo selectById(String id)throws SQLException;
 	//查询分类商品
@@ -19,4 +20,6 @@ public interface ProductInfoDao {
 	//模糊查询
 	public  List<ProductInfo> selectByKey(String key)throws SQLException;
 	public List<ProductInfo> selectAll() throws SQLException;
+
+	public List<ProductInfo> selectCartAll() throws SQLException;
 }

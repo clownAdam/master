@@ -19,13 +19,18 @@ public class ProductCartServlet extends HttpServlet{
 @Override
 protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	try {
-		List<ProductInfo> selectAll = new ArrayList<>();
+//		List<ProductInfo> selectAll = new ArrayList<>();
 		ProductInfoServiceImpl service = new ProductInfoServiceImpl();
 		String pid = (String) req.getParameter("pid");
 		String uid = (String) req.getParameter("uid");
+		// 查询
 		ProductInfo productInfo = service.selectById(pid);
+		// 插入
+		service.insertCart(productInfo);
 		System.out.println("productInfo = " + productInfo);
-		selectAll.add(productInfo);
+		//查询购物车所有
+		List<ProductInfo> selectAll = service.selectCartAll();
+//		selectAll.add(productInfo);
 		req.setAttribute("products", selectAll);
 		
 		req.getRequestDispatcher("/product_cart.jsp").forward(req, resp);

@@ -14,8 +14,10 @@ public interface ProductInfoService {
 	
 //	查询所有
 	public  List<ProductInfo> selectAll() throws SQLException;
+	public  List<ProductInfo> selectCartAll() throws SQLException;
 //	插入
 	public int insert(ProductInfo pi) throws SQLException;
+	public int insertCart(ProductInfo pi) throws SQLException;
 	//查询单个商品
 	public ProductInfo selectById(String id)throws SQLException;
 	//查询分类商品

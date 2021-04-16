@@ -41,7 +41,7 @@
 				<td><a href="goods_detail.do?pid=${product.product_id }">${product.product_stock }</a></td>
 				<td><a href="goods_detail.do?pid=${product.product_id }">${product.category_type}</a></td>
 				<td><a href="goods_detail.do?pid=${product.product_id }">${product.create_time}</a></td>
-				<td><a href="goods_detail.do?pid=${product.product_id }"><img src="/upload/${product.product_icon}"/></a></td>
+				<td><a href="goods_detail.do?pid=${product.product_id }"><img src="/upload/${product.product_icon}" width="100px"/></a></td>
 			</tr>
 
 		</c:forEach>
